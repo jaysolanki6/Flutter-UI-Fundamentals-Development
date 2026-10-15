@@ -1,0 +1,55 @@
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MySimpleRow(),
+    );
+  }
+}
+
+class MySimpleRow extends StatelessWidget {
+  const MySimpleRow({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('My Simple Row'),
+        backgroundColor: Colors.deepPurple,
+        foregroundColor: Colors.white,
+      ),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: const [
+            Icon(
+              Icons.favorite,
+              color: Colors.red,
+              size: 40,
+            ),
+            Icon(
+              Icons.share,
+              color: Colors.blue,
+              size: 40,
+            ),
+            Icon(
+              Icons.comment,
+              color: Colors.green,
+              size: 40,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
